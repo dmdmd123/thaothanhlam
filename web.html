@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thao's Green Kitchen</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+  />
+    <style>
+        /* Reset default margin and padding */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #e0f2f1; /* Màu nền xanh cổ vịt */
+    }
+    
+    /* Header */
+    header {
+        background-color: #00796b; /* Màu xanh cổ vịt */
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+    
+    nav ul li a:hover { 
+        text-decoration: underline;
+    }
+    
+    /* Menu Section */
+    #menu {
+        padding: 40px 0;
+    }
+
+    .header-container {
+        position: relative;
+    }
+    
+    .header-container img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: opacity(30%);
+    }
+    
+    
+    .header-container :not(img) {
+        position: relative; 
+        z-index: 2;
+    }
+
+    .container h2, .container h3 {
+        color: #008080;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+    }
+    
+    .menu-item {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        margin-bottom: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .menu-item img {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+    }
+    
+    .menu-item h4 {
+        margin: 15px 0;
+        font-size: 1.5rem;
+    }
+    
+    .price {
+        color: #d32f2f;
+        font-size: 1.2rem;
+    }
+
+    .order-form {
+        width: 50%;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* Footer */
+    footer {
+        background-color: #00796b;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>Thao's Green Kitchen</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="#menu">Thực Đơn</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <img src="./banner.jpg" alt="banner">
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <section id="menu">
+        <div class="container">
+                <h2>Thực Đơn</h2>
+                <h3>Món Ăn Chay</h3>
+            <div id="doan">
+            <div class="menu-list">
+                <!-- Món ăn chay -->
+             
+                <div class="menu-item">
+                    <img src="https://cdn.tgdd.vn/2020/08/CookProduct/avocado-finale-1200x676.jpg" alt="Salad Bơ">
+                    <h4>Salad Bơ</h4>
+                    <p>Món ăn giàu chất xơ, vitamin và khoáng chất.</p>
+                    <p class="price">50,000 VNĐ</p>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://www.lorca.vn/wp-content/uploads/2022/08/VegetarianSaladRolls11.jpg" alt="Gỏi Cuốn Chay">
+                    <h4>Gỏi Cuốn Chay</h4>
+                    <p>Gỏi cuốn tươi ngon với rau và đậu hũ chiên.</p>
+                    <p class="price">45,000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://nhahangmocnhien.vn/wp-content/uploads/2024/03/cong-thuc-1-cach-nau-pho-chay-cho-ngay-ram.jpg.webp" alt="Phở Chay">
+                    <h4>Phở Chay</h4>
+                    <p>Phở chay thanh đạm, nước dùng thơm ngon.</p>
+                    <p class="price">65,000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://img-global.cpcdn.com/recipes/ef8a3f1ffe732dcf/1360x1928cq70/banh-xeo-chay-recipe-main-photo.webp" alt="Bánh Xèo Chay">
+                    <h4>Bánh Xèo Chay</h4>
+                    <p>Bánh xèo giòn rụm, nhân đậu xanh và rau sống.</p>
+                    <p class="price">55,000 VNĐ</p>
+                </div><div class="menu-item">
+                    <img src="https://i-giadinh.vnecdn.net/2022/08/08/Thanh-pham-3-3-7795-1659943657.jpg" alt="Mì Xào Chay">
+                    <h4>Mì Xào Chay</h4>
+                    <p>Mì xào với đậu hũ, nấm và rau cải.</p>
+                    <p class="price">50,000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://monngonmoingay.com/wp-content/smush-webp/2015/08/AGF-1982-com-chien-chay.png.webp" alt="Cơm Chiên Chay">
+                    <h4>Cơm Chiên Chay</h4>
+                    <p>Cơm chiên rau củ tươi ngon, đầy đủ dinh dưỡng.</p>
+                    <p class="price">60,000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://cdn.tgdd.vn/Files/2018/11/25/1133505/yen-mach-la-gi-cach-nau-chao-yen-mach-bo-duong-ngon-ngat-ngay-10.jpg" alt="Cháo Lúa Mạch">
+                    <h4>Cháo Lúa Mạch</h4>
+                    <p>Cháo lúa mạch thanh mát, dễ tiêu hóa.</p>
+                    <p class="price">40,000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://scontent.fhan5-6.fna.fbcdn.net/v/t39.30808-6/274818232_136990532147771_8680900344934697880_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=QJ2NKpkTWPsQ7kNvgEI4X7_&_nc_zt=23&_nc_ht=scontent.fhan5-6.fna&_nc_gid=A4SY035cWEGzPIs4pGoGlwZ&oh=00_AYBUPWrMJLm_UggNudlwJW_0AM1lG2nXgYohv9C_uMSHqg&oe=677B1D17" alt="Bánh Bột Lọc Chay">
+                    <h4>Bánh Bột Lọc Chay</h4>
+                    <p>Bánh bột lọc nhân đậu xanh và nấm.</p>
+                    <p class="price">50,000 VNĐ</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://cdn.tgdd.vn/Files/2019/01/10/1143809/cach-lam-cha-gio-chay-cho-ngay-tet-thanh-tinh-202112032252087808.jpg" alt="Chả Giò Chay">
+                    <h4>Chả Giò Chay</h4>
+                    <p>Chả giò chay với nhân đậu hũ và rau củ tươi ngon.</p>
+                    <p class="price">50,000 VNĐ</p>
+                </div>
+            </div>
+            
+                <!-- Các món ăn chay khác ở đây -->
+            <div id="monuong">
+                <h3>Đồ Uống</h3>
+                 <div class="menu-list">
+                <!-- Đồ uống -->
+    
+
+                <div class="menu-item">
+                    <img src="https://tiki.vn/blog/wp-content/uploads/2023/03/cach-lam-sinh-to-xoai.jpg" alt="Sinh Tố Xoài">
+                    <h4>Sinh Tố Xoài</h4>
+                    <p>Sinh tố xoài ngọt ngào, thích hợp cho mùa hè.</p>
+                    <p class="price">35,000 VNĐ</p>
+                </div>
+
+            </div>
+                <!-- Các đồ uống khác ở đây -->
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="order-form">
+        <h2>Đặt hàng ngay</h2>
+        <input type="text" id="phoneNumber" placeholder="Số điện thoại">
+        <input type="text" id="gmail" placeholder="Gmail">
+        <input type="text" id="productName" placeholder="Tên sản phẩm">
+        <textarea type="text" id="message" placeholder="Lời nhắn"></textarea>
+        <button>Gửi thông tin</button>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div id="contact">
+            <p>&copy; 2025 Thao's Green Kitchen. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script>
+        //Thêm sản phẩm vào đây
+        //Loaị sản phẩm: doAn: true = Đồ ăn, doAn: false = đồ uống
+        const sanpham = [
+           { doAn: true, tenSp: "", motaSp: "", giaSp: "", linkImg: ""},
+           { doAn: false, tenSp: "", motaSp: "", giaSp: "", linkImg: ""},
+        ];
+
+        sanpham.forEach((sp)=> {
+            let elm = document.createElement('div');
+            elm.className = "menu-list"
+            elm.innerHTML = `
+            <img src="${sp.linkImg}" alt="${sp.tenSp}">
+            <h4>${sp.tenSp}</h4>
+            <p>${sp.motaSp}</p>
+            <p class="price">${sp.giaSp}</p>
+            `;
+            document.querySelector(`#${(sp.doAn ? "doan" : "monuong")} .menu-list`).appendChild(elm);
+        });
+    </script>
+</body>
+
+</html>
